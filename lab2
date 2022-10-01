@@ -1,0 +1,103 @@
+#include <iostream>
+#include <ctime>
+void show_bassage()
+{
+    std::cout << "the faculty is not filled yet\n";
+}
+
+
+
+
+
+void show3()
+{
+int input;
+time_t rawtime;
+time ( &rawtime );
+std::cout << "1:162"<<std::endl;
+std::cout << "2:163"<<std::endl;
+std::cout << "3:164"<<std::endl;
+std::cout << "4:165"<<std::endl; 
+std::cout << "5:165"<<std::endl;
+std::cout << ">"; 
+std::cin>> input;
+switch ( input ) {
+  case 1:
+    std::cout << "Current local time and date: "
+            <<  ctime (&rawtime)<< " and we have a couple on programming";
+    break;
+  case 2:
+    show_bassage();
+    break;
+  case 3:
+    show_bassage();
+    break;
+  case 4:
+    show_bassage();
+    break;
+}
+std::cin.get();
+
+}
+
+void show2()
+{
+int input;
+std::cout << "1:tor"<<std::endl;
+std::cout << "2:svch"<<std::endl;
+std::cout << "3:ty"<<std::endl;
+std::cout << "4:123"<<std::endl; 
+std::cout << "5:456"<<std::endl;
+std::cout << ">"; 
+std::cin>> input;
+switch ( input ) {
+  case 1:
+    show3();
+    break;
+  case 2:
+    show_bassage();
+    break;
+  case 3:
+    show_bassage();
+    break;
+  case 4:
+    show_bassage();
+    break;
+}
+std::cin.get();
+
+}
+
+
+ 
+int main()
+{
+  int input;
+do{
+std::cout << "1: RTF "<<std::endl;
+std::cout << "2: RKF "<<std::endl;
+std::cout << "3: FVS "<<std::endl;
+std::cout << "4: Fsu "<<std::endl; 
+std::cout << "5: EXIT"<<std::endl;
+std::cout << ">"; 
+std::cin>> input;
+  
+  switch ( input ) {
+  case 1:
+    show2();
+    break;
+  case 2:
+    show_bassage();
+    break;
+  case 3:
+    show_bassage();
+    break;
+  case 4:
+    show_bassage();
+    break;
+  }
+  if(input != 5)
+  std::cin.get();
+}while(input != 5);
+return 0;
+}
